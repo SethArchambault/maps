@@ -426,6 +426,8 @@ open class RCTMGLMapView : MapView {
 // MARK: - event handlers
 
 extension RCTMGLMapView {
+  #if RNMBX_11
+  #else
   private func onEvery<Payload>(event: MapEvents.Event<Payload>, handler: @escaping  (RCTMGLMapView, MapEvent<Payload>) -> Void) {
     let eventListener = self.mapView.mapboxMap.onEvery(event: event) { [weak self](mapEvent) in
       guard let self = self else { return }
@@ -445,6 +447,7 @@ extension RCTMGLMapView {
       handler(self, mapEvent)
     }
   }
+  #endif
 
   @objc func setReactOnMapChange(_ value: @escaping RCTBubblingEventBlock) {
     self.reactOnMapChange = value

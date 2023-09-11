@@ -77,15 +77,13 @@ PODS:
     - hermes-engine/Pre-built (= 0.71.7)
   - hermes-engine/Pre-built (0.71.7)
   - libevent (2.1.12)
-  - MapboxCommon (23.7.0)
-  - MapboxCoreMaps (10.15.0):
-    - MapboxCommon (~> 23.7)
-  - MapboxMaps (10.15.0):
-    - MapboxCommon (= 23.7.0)
-    - MapboxCoreMaps (= 10.15.0)
-    - MapboxMobileEvents (= 1.0.10)
-    - Turf (~> 2.0)
-  - MapboxMobileEvents (1.0.10)
+  - MapboxCommon (24.0.0-beta.3)
+  - MapboxCoreMaps (11.0.0-beta.3):
+    - MapboxCommon (~> 24.0.0-beta)
+  - MapboxMaps (11.0.0-beta.2):
+    - MapboxCommon (= 24.0.0-beta.3)
+    - MapboxCoreMaps (= 11.0.0-beta.3)
+    - Turf (= 2.6.1)
   - OpenSSL-Universal (1.1.1100)
   - RCT-Folly (2021.07.22.00):
     - boost
@@ -430,14 +428,14 @@ PODS:
     - React-perflogger (= 0.71.7)
   - RNCAsyncStorage (1.19.0):
     - React-Core
-  - rnmapbox-maps (10.0.12-rc.0):
-    - MapboxMaps (~> 10.15.0)
+  - rnmapbox-maps (10.0.14-rc.0):
+    - MapboxMaps (~> 11.0.0-beta.2)
     - React
     - React-Core
-    - rnmapbox-maps/DynamicLibrary (= 10.0.12-rc.0)
+    - rnmapbox-maps/DynamicLibrary (= 10.0.14-rc.0)
     - Turf
-  - rnmapbox-maps/DynamicLibrary (10.0.12-rc.0):
-    - MapboxMaps (~> 10.15.0)
+  - rnmapbox-maps/DynamicLibrary (10.0.14-rc.0):
+    - MapboxMaps (~> 11.0.0-beta.2)
     - React
     - React-Core
     - Turf
@@ -449,7 +447,7 @@ PODS:
   - RNVectorIcons (9.2.0):
     - React-Core
   - SocketRocket (0.6.0)
-  - Turf (2.4.0)
+  - Turf (2.6.1)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -538,7 +536,6 @@ SPEC REPOS:
     - MapboxCommon
     - MapboxCoreMaps
     - MapboxMaps
-    - MapboxMobileEvents
     - OpenSSL-Universal
     - SocketRocket
     - Turf
@@ -645,10 +642,9 @@ SPEC CHECKSUMS:
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
   hermes-engine: 4438d2b8bf8bebaba1b1ac0451160bab59e491f8
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
-  MapboxCommon: dcbdb86acbcfc1a23efd341ed097c6c63ab532a9
-  MapboxCoreMaps: bcbaac14467616940187f79bba49ca491cd37906
-  MapboxMaps: 1fd9d97d0e8eceb7a45b9ac8bf87a8922da881a8
-  MapboxMobileEvents: de50b3a4de180dd129c326e09cd12c8adaaa46d6
+  MapboxCommon: 8f44b22c616b9dae2e8ce4461e9cb46713e3a5c2
+  MapboxCoreMaps: a9183130b1ec1978fd42edf8e8a1ed3b439b50cd
+  MapboxMaps: 142bae2bd5f4abf877f22fb75ab7b51a2f9ee81e
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1
   RCTRequired: 5a4a30ac20c86eeadd6844a9328f78d4168cf9b2
@@ -679,15 +675,15 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: c5c89f8f543842dd864b63ded1b0bbb9c9445328
   ReactCommon: dbfbe2f7f3c5ce4ce44f43f2fd0d5950d1eb67c5
   RNCAsyncStorage: 4b98ac3c64efa4e35c1197cb0c5ca5e9f5d4c666
-  rnmapbox-maps: 8be8b4f7531f261ec1799978ebcb3aa4fa2a280a
+  rnmapbox-maps: ab60b8efb2e215d3769ec64555a54fd8f20a4909
   RNScreens: 68fd1060f57dd1023880bf4c05d74784b5392789
   RNSVG: d7d7bc8229af3842c9cfc3a723c815a52cdd1105
   RNVectorIcons: fcc2f6cb32f5735b586e66d14103a74ce6ad61f8
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
-  Turf: 60b93cfdc62758526bc7bf1ef191a829aeb9694d
+  Turf: 469ce2c3d22e5e8e4818d5a3b254699a5c89efa4
   Yoga: d56980c8914db0b51692f55533409e844b66133c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: bfab0669ee1685ddf9f7583652d73bd51f1c9919
+PODFILE CHECKSUM: 7a2d984a4946044980b25b0bcd9cd00e131f4c4e
 
 COCOAPODS: 1.12.1

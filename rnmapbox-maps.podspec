@@ -20,7 +20,7 @@ require 'json'
 package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 
 ## Warning: these lines are scanned by autogenerate.js
-rnMapboxMapsDefaultMapboxVersion = '~> 10.15.0'
+rnMapboxMapsDefaultMapboxVersion = '~> 11.0.0-beta.2'
 rnMapboxMapsDefaultMapboxGLVersion = '~> 5.9.0'
 rnMapboxMapsDefaultMapLibreVersion = 'exactVersion 5.12.1'
 
@@ -154,6 +154,11 @@ def $RNMapboxMaps._add_spm_to_target(project, target, url, requirement, product_
 end
 
 def $RNMapboxMaps.post_install(installer)
+
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings['OTHER_SWIFT_FLAGS'] ||= ['$(inherited)', '-D RNMBX_11']
+  end
+
   if $RNMapboxMapsSwiftPackageManager
     return if $RNMapboxMapsSwiftPackageManager == "manual"
 
@@ -234,7 +239,7 @@ Pod::Spec.new do |s|
   s.homepage    	= "https://github.com/rnmapbox/maps#readme"
   s.source      	= { :git => "https://github.com/rnmapbox/maps.git" }
   s.license     	= "MIT"
-  s.platform    	= :ios, "11.0"
+  s.platform    	= :ios, "13.0"
 
   unless $RNMapboxMapsSwiftPackageManager
     case $RNMapboxMapsImpl

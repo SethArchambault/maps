@@ -1,6 +1,8 @@
 import Foundation
 import MapboxMaps
+#if canImport(MapboxMobileEvents)
 import MapboxMobileEvents
+#endif
 
 
 let DEFAULT_SOURCE_ID = "composite";

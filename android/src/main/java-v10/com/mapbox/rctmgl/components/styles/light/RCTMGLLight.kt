@@ -1,16 +1,21 @@
 package com.mapbox.rctmgl.components.styles.light
 
 import android.content.Context
-import com.mapbox.maps.extension.style.light.generated.setLight
+//import com.mapbox.maps.extension.style.light.generated.setLight
 import com.mapbox.rctmgl.components.AbstractMapFeature
 import com.mapbox.maps.MapboxMap
 import com.facebook.react.bridge.ReadableMap
 import com.mapbox.maps.Style
-import com.mapbox.maps.extension.style.light.generated.Light
+import com.mapbox.rctmgl.mapbox.Light;
+//import com.mapbox.maps.extension.style.light.generated.Light
 import com.mapbox.rctmgl.components.RemovalReason
 import com.mapbox.rctmgl.components.mapview.RCTMGLMapView
 import com.mapbox.rctmgl.components.styles.RCTMGLStyleFactory
 import com.mapbox.rctmgl.components.styles.RCTMGLStyle
+
+fun Style.setLight(light: Light) {
+
+}
 
 class RCTMGLLight(context: Context?) : AbstractMapFeature(context) {
     private var mMap: MapboxMap? = null
